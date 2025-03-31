@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="home dashboard.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="home dashboard.js"></script>
+</head>
+<body>
+    <style>
+        canvas {
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+   
+    <div id ="full-wrapper">
+        <div class="main">
+            <header class="container-sm">
+                <nav>
+                    <div class="row">
+                        <div class="col p-2"><p id="odd">Living Room</p></div><div class="col p-2"><p class="even">BedRoom</p></div>
+                        <div class="col p-2"><p class="even">Kitchen</p></div><div class="col p-2"><p class="even">Bathroom</p></div>
+                        <div class="col p-2"><p class="even">Store</p></div><div class="col p-2"><p class="even">Garage</p></div>
+                    </div>
+                </nav>
+                <!--<div id="plus"><i class="fa-solid fa-plus"></i></div>-->
+            </header>
+            <div class="top">
+                <div class="device">
+                    <div>
+                        <img src="lamp.png" alt="" width="160px" height="300px">
+                    </div>
+                    <div class="details">
+                        <div id="inner-header">
+                            <div>
+                            <p><span style="color:rgb(156, 153, 153);">Device</span><br>
+                            Luminous LED Mordern  Standing Lamp</p>
+                           </div>
+                           <div style="font-size:1.7em; margin-top: 0.3em;">
+                            <i class="fa-solid fa-bars"></i>
+                          </div>
+                        </div>
+                        <div id="energy">
+                          <div id="time"><span>4Hr  12Min </span>
+                             <p>Time in use</p>
+                          </div>
+                          <div id="time">
+                            <span> 72 watts</span>
+                            <p> Energy Consumption</p>
+                          </div>
+                        </div>
+                        <div class="auto">
+                            <div class="on"><p style="font-size: 0.8em; margin-bottom: 3px;">On From</p>
+                                <p style="font-size: 1.2em; font-weight: bolder;">06:00 <span style="font-size: 0.7em; font-weight:lighter;">PM</span></p>
+                            </div> 
+                            <div class="off">
+                                <p style="font-size: 0.8em; margin-bottom: 3px;">Off from</p>
+                                <p style="font-size: 1.2em; font-weight: bolder;">05:00 <span style="font-size: 0.7em; font-weight:lighter;">AM</span></p>
+                            </div>
+                        </div>
+                        <div class="progress" style="height:2.2em" id="bar">
+                            <div class="progress-bar  bg-info" style="width:50%; opacity: 0.35; text-align: left;"><i class="fa-regular fa-sun"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="consumption">
+                    <h5> Energy Consumption <span style="color:rgb(156, 153, 153);">(kwh)</span></h5>
+                    <div> 
+                        <div  class ="chart" width="250px">
+                        <canvas id="myBarChart" width="250" height="200"></canvas></div>
+                    </div>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="middle-box">
+                   <p>Current Consumption<p>
+                   <h2> 1.5Kwh</h2>
+                </div>
+                <div class="middle-box">
+                    <p>Humidty</p>
+                    <h2> 48.2 %</h2>
+                </div>
+                <div class="middle-box">
+                    <p>Temperature</p>
+                    <h2> 30<sup>o</sup>C</h2>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="card">
+                    <div class ="c-top">
+                    <div class="icon"><i class="fa-solid fa-bars"></i></div>
+                    <div class="switch-cont">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                      </label>
+                     </div>
+                    </div>
+                    <div class="card-text">
+                        <p>Samsung</p>
+                        <h5>Television</h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class ="c-top">
+                        <div class="icon"><i class="fa-solid fa-bars"></i></div>
+                        <div class="switch-cont">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                          </label>
+                         </div>
+                        </div>
+                    <div class="card-text">
+                        <p>Thermalcool</p>
+                        <h5>Air Conditional</h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class ="c-top">
+                        <div class="icon"><i class="fa-solid fa-bars"></i></div>
+                        <div class="switch-cont">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                          </label>
+                         </div>
+                        </div>
+                    <div class="card-text">
+                        <p>OX</p>
+                        <h5> Electric Fan</h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class ="c-top">
+                        <div class="icon"><i class="fa-solid fa-bars"></i></div>
+                        <div class="switch-cont">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                          </label>
+                         </div>
+                        </div>
+                    <div class="card-text">
+                        <p>Xiamoi</p>
+                        <h5>Camera</h5>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="right-corner">
+            <div id="time2"><p>10:30 PM</p></div>
+            <div class="line"></div>
+            <div id="Trow">
+                <div class="thermo">
+                <p>Thermostat</p>
+                </div>
+                <div class="toggle">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                  </div>
+            </div>
+            <div class="pro-cont">
+                <div class="progress-circle">
+                    <span id="percentage">40°</span>
+                  </div>
+                 
+                  <div class="control-buttons">
+                    <button id="decrease">-</button>
+                    <button id="increase">+</button>
+                </div>
+            </div>
+            <br>
+            <div id="Trow2"> 
+                <div> <p ><i class="fa-solid fa-fire"></i></i><br>Hot</p></div>
+                <div><p><i class="fa-solid fa-leaf"></i><br>Eco</p></div>
+                <div><p><i class="fa-solid fa-wind"></i><br>Fan</p></div>
+                <div><p><i class="fa-solid fa-snowflake"></i><br>Cold</p></div>
+            </div>
+
+            <div id="music">
+              <p>Burnaboy X Wizkid</p>
+              <h5> Greater than One</h5>
+              <div class="progress"  id="bar2">
+                <div class="progress-bar bg-dark " style="width:30%;"></div>
+              </div>
+              <div style="text-align: left; font-size: 0.8em; margin-top: -1.0em; margin-bottom: 0.5em;">0:00 <span style="float: right;">3:02</span></div>
+              <div id="Trow3">
+                <div><i class="fa-solid fa-arrows-rotate"></i></div>
+                <div><i class="fa-solid fa-backward"></i></div>
+                <div style="font-size: 1.4em; background-color: rgb(184, 240, 240); padding:0.05em 0.6em 1.1em 0.6em ;"><i class="fa-solid fa-pause"></i></div>
+                <div><i class="fa-solid fa-forward-fast"></i></div>
+                <div><i class="fa-solid fa-tower-broadcast"></i></div>
+              </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('myBarChart').getContext('2d');
+            
+            const myBarChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['January', 'February', 'March', 'April', 'May'],
+                    datasets: [{
+                        label: 'Energy',
+                        data: [50, 100, 75, 150, 200],
+                        backgroundColor: [
+                            '#0f506e',
+                            '#0f506e',
+                            '#0f506e',
+                            '#0f506e',
+                            '#0f506e'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)'
+                        ],
+                        borderWidth: 1
+
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                borderDash: [5, 5],
+                                color: '#ddd'
+                            },
+                            ticks: {
+                                color: '#333'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                color: '#333'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            labels: {
+                                font: {
+                                    size: 14
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+        
+</body>
+</html>
