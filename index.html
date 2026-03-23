@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
@@ -25,7 +25,7 @@
     <div id ="full-wrapper">
         <div class="main">
             <header class="container-sm">
-               <nav class="container">
+                <nav class="container">
                     <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-2 text-center">
                       <div class="col"><p class="odd">Living Room</p></div>
                       <div class="col"><p class="even">Bedroom</p></div>
@@ -53,10 +53,10 @@
                           </div>
                         </div>
                         <div id="energy">
-                          <div id="time"><span>4Hr  12Min </span>
+                          <div class="time"><span>4Hr  12Min </span>
                              <p>Time in use</p>
                           </div>
-                          <div id="time">
+                          <div class="time">
                             <span> 72 watts</span>
                             <p> Energy Consumption</p>
                           </div>
@@ -161,54 +161,55 @@
 
             </div>
         </div>
-        <div class="right-corner">
-            <div id="time2"><p>10:30 PM</p></div>
-            <div class="line"></div>
-            <div id="Trow">
-                <div class="thermo">
-                <p>Thermostat</p>
+        <div>
+            <div class="right-corner">
+                <div id="time2"><p>10:30 PM</p></div>
+                <div class="line"></div>
+                <div id="Trow">
+                    <div class="thermo">
+                    <p>Thermostat</p>
+                    </div>
+                    <div class="toggle">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    </div>
                 </div>
-                <div class="toggle">
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                  </label>
-                  </div>
-            </div>
-            <div class="pro-cont">
-                <div class="progress-circle">
-                    <span id="percentage">40°</span>
-                  </div>
-                 
-                  <div class="control-buttons">
-                    <button id="decrease">-</button>
-                    <button id="increase">+</button>
+                <div class="pro-cont">
+                    <div class="progress-circle">
+                        <span id="percentage">40°</span>
+                    </div>
+                    
+                    <div class="control-buttons">
+                        <button id="decrease">-</button>
+                        <button id="increase">+</button>
+                    </div>
                 </div>
-            </div>
-            <br>
-            <div id="Trow2"> 
-                <div> <p ><i class="fa-solid fa-fire"></i></i><br>Hot</p></div>
-                <div><p><i class="fa-solid fa-leaf"></i><br>Eco</p></div>
-                <div><p><i class="fa-solid fa-wind"></i><br>Fan</p></div>
-                <div><p><i class="fa-solid fa-snowflake"></i><br>Cold</p></div>
-            </div>
+                <br>
+                <div id="Trow2"> 
+                    <div> <p ><i class="fa-solid fa-fire"></i></i><br>Hot</p></div>
+                    <div><p><i class="fa-solid fa-leaf"></i><br>Eco</p></div>
+                    <div><p><i class="fa-solid fa-wind"></i><br>Fan</p></div>
+                    <div><p><i class="fa-solid fa-snowflake"></i><br>Cold</p></div>
+                </div>
 
-            <div id="music">
-              <p>Burnaboy X Wizkid</p>
-              <h5> Greater than One</h5>
-              <div class="progress"  id="bar2">
-                <div class="progress-bar bg-dark " style="width:30%;"></div>
-              </div>
-              <div style="text-align: left; font-size: 0.8em; margin-top: -1.0em; margin-bottom: 0.5em;">0:00 <span style="float: right;">3:02</span></div>
-              <div id="Trow3">
-                <div><i class="fa-solid fa-arrows-rotate"></i></div>
-                <div><i class="fa-solid fa-backward"></i></div>
-                <div style="font-size: 1.4em; background-color: rgb(184, 240, 240); padding:0.05em 0.6em 1.1em 0.6em ;"><i class="fa-solid fa-pause"></i></div>
-                <div><i class="fa-solid fa-forward-fast"></i></div>
-                <div><i class="fa-solid fa-tower-broadcast"></i></div>
-              </div>
-            </div>
-
+                <div id="music">
+                <p>Burnaboy X Wizkid</p>
+                <h5> Greater than One</h5>
+                <div class="progress"  id="bar2">
+                    <div class="progress-bar bg-dark " style="width:30%;"></div>
+                </div>
+                <div style="text-align: left; font-size: 0.8em; margin-top: -1.0em; margin-bottom: 0.5em;">0:00 <span style="float: right;">3:02</span></div>
+                <div id="Trow3">
+                    <div><i class="fa-solid fa-arrows-rotate"></i></div>
+                    <div><i class="fa-solid fa-backward"></i></div>
+                    <div style="font-size: 1.4em; background-color: rgb(184, 240, 240); padding:0.05em 0.6em 1.1em 0.6em ;"><i class="fa-solid fa-pause"></i></div>
+                    <div><i class="fa-solid fa-forward-fast"></i></div>
+                    <div><i class="fa-solid fa-tower-broadcast"></i></div>
+                </div>
+                </div>
+        </div>
         </div>
     </div>
     <script>
